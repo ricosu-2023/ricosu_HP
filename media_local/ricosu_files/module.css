@@ -1,0 +1,755 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+
+ File Name  : module.css
+ Style Info : 共通要素の基本設定
+=================================================================== */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  background: #fff;
+  color: #000;
+}
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*----------------------------------------------------------------
+	共通
+----------------------------------------------------------------*/
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  color: #353535;
+  background: #fff;
+  font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+body:not(.home) {
+  padding-top: 58px;
+}
+
+body, input, textarea {
+  font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, dt {
+  font-weight: bold;
+}
+
+textarea {
+  resize: vertical;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+em {
+  color: #511;
+  font-weight: bold;
+}
+
+textarea {
+  resize: vertical;
+}
+
+address {
+  font-style: normal;
+}
+
+a, a:link {
+  color: #353535;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.70;
+}
+
+a.logo:hover {
+  opacity: 1;
+}
+
+input[type=image]:hover {
+  text-decoration: none;
+  opacity: 0.70;
+}
+
+.inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.contact_btn {
+  display: table;
+  margin: 0 auto;
+  padding: 12px 60px;
+  border-radius: 8px;
+  background: #22b5bb;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #fff!important;
+}
+
+img.right {
+  float: right;
+  margin-left: 30px;
+}
+
+img.left {
+  float: left;
+  margin-right: 30px;
+}
+
+.txtAll {
+  overflow: hidden;
+  margin-bottom: 90px;
+}
+
+.pnk {
+  color: #da6d91;
+}
+
+.pur {
+  color: #ab9dcb;
+}
+
+.blu {
+  color: #67abde;
+}
+
+.gre {
+  color: #7cc3bf;
+}
+
+.ygre {
+  color: #cad759;
+}
+
+.red {
+  color: #f4a792;
+}
+
+.bg_pnk {
+  background: #da6d91;
+}
+
+.bg_pur {
+  background: #ab9dcb;
+}
+
+.bg_blu {
+  background: #67abde;
+}
+
+.bg_gre {
+  background: #7cc3bf;
+}
+
+.bg_ygre {
+  background: #cad759;
+}
+
+.bg_red {
+  background: #f4a792;
+}
+
+.pc_disp {
+  display: block !important;
+}
+
+.sp_disp {
+  display: none !important;
+}
+
+/* header要素
+----------------------------------------------------------- */
+
+#header {
+  position: fixed;
+  z-index: 1;
+  display: table;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  background: #fff;
+}
+
+#header.top, body:not(.home) #header {
+  background: rgba(255, 255, 255, 0.70);
+  border-bottom: 1px solid #ccc;
+}
+
+#header.top #gnav ul li a, body:not(.home) #header #gnav ul li a {}
+
+#header .logo {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  padding-left: 30px;
+}
+
+#header.top .logo, body:not(.home) #header .logo {}
+
+#header.top .logo img, body:not(.home) #header .logo img {}
+
+#header #gnav {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+
+@media only screen and (min-width:1025px) {
+  #header #gnav {
+    display: block!important;
+  }
+}
+
+#header #gnav ul {
+  display: table;
+  width: 100%;
+}
+
+#header #gnav ul li {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+}
+
+#header #gnav ul li a {
+  display: block;
+  padding: 0 22px;
+  text-align: center;
+  color: #353535;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+a#menu {
+  display: none;
+}
+
+/* メイン画像
+----------------------------------------------------------- */
+
+.home #main {
+  padding: 80px 0 0 0;
+  background: url(/media/ricosu_files/main.png) no-repeat center 80px;
+  background-size: cover;
+  text-align: center;
+  height: 106vh;
+  position: relative;
+}
+
+.home #main .cath {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  color: #fff;
+  height: 2em;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+/* contents要素
+----------------------------------------------------------- */
+
+/* wrapper要素
+----------------------------------------------------------- */
+
+#wrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* トップページ
+----------------------------------------------------------- */
+
+#contents section {
+  padding: 80px 0 40px;
+}
+
+#contents section h2 {
+  margin: 0 auto 90px;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: normal;
+  display: table;
+  position: relative;
+}
+
+#contents section h2::before {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 50%;
+  background: #6dba43;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+/* about */
+
+#contents section#about {
+  background: url(/media/ricosu_files/about_bg.png) no-repeat center 0;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  padding-top: 0;
+}
+
+#about .inner {
+  padding: 0 45px;
+}
+
+#contents section#about h2 {
+  background: #6dba43;
+  line-height: 1;
+  position: relative;
+  height: 82px;
+  display: block;
+  margin-bottom: 65px;
+}
+
+#about h2 img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  top: -35px;
+}
+
+#about .txt {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-align: left;
+  font-size: 1.8rem;
+  font-family: 'Noto Serif Japanese', "Hiragino Mincho ProN", "Hiragino Mincho Pro", 'Noto Sans Japanese', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ 明朝", serif;
+  float: right;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #FFF, 0 0 0.40px #FFF;
+}
+
+#about .txt h3 {
+  font-size: 3rem;
+  margin-left: 30px;
+}
+
+#about .txt p {
+  font-size: 2.2rem;
+  margin-left: 20px;
+  line-height: 2em;
+}
+
+#about .txt p:last-child {
+  margin-left: 0;
+}
+
+#about .inner img {
+  margin-top: 65px;
+}
+
+/* service */
+
+#service {
+  background: url(/media/ricosu_files/ser_bg.png) no-repeat center 0;
+  background-size: cover;
+}
+
+#service .inner {
+  padding: 0 30px 70px;
+}
+
+#service .txt {
+  float: left;
+  font-size: 1.8rem;
+  width: 510px;
+}
+
+#service .txt p {
+  margin-bottom: 40px;
+}
+
+#service .txt img {
+  display: block;
+  margin: 20px auto;
+}
+
+#service .txt a.link_btn {
+  display: block;
+  margin: 30px 0 15px;
+  padding: 10px;
+  color: #e95000;
+  text-align: center;
+  font-size: 1.8rem;
+  border: 1px solid #4d4d4d;
+  text-decoration: none;
+  background: #fff;
+}
+
+#service .txt a {
+  color: #e95000;
+  text-decoration: underline;
+  font-size: 1.6rem;
+}
+
+#service .txt a:hover {
+  text-decoration: none;
+}
+
+/* business */
+
+#business {
+  background: #f3f3f3;
+}
+
+#business .inner {
+  padding: 0 30px;
+}
+
+#business .txt {
+  font-size: 1.8rem;
+  width: 495px;
+}
+
+#business .txt h3 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  color: #6dba43;
+  font-weight: normal;
+}
+
+#business .txt h4 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+#business .txt p {
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+#business img {
+  margin-bottom: 85px;
+}
+
+/* recipe */
+
+#recipe h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#recipe h4 {
+  padding-left: 45px;
+  font-size: 2.4rem;
+  border-bottom: 1px solid #ef7c00;
+  padding-bottom: 0;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+#recipe h4.icn1 {
+  background: url(/media/ricosu_files/rec_h4icn1.png) no-repeat 0 center;
+  margin-top: 20px;
+}
+
+#recipe h4.icn2 {
+  background: url(/media/ricosu_files/rec_h4icn2.png) no-repeat 0 center;
+  padding-left: 40px;
+}
+
+#recipe .box-wh {
+  padding: 35px 30px;
+  font-size: 1.6rem;
+  margin-bottom: 45px;
+}
+
+#recipe .box-wh .top {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#recipe .box-wh .btm {
+  line-height: 2;
+}
+
+.rec_icn1 {
+  display: block;
+  margin: 0 auto;
+}
+
+#recipe .box-right {
+  float: right;
+  width: 445px;
+}
+
+#recipe table {
+  width: 100%;
+}
+
+#recipe table th {
+  text-align: left;
+  font-weight: normal;
+}
+
+#recipe table td {
+  text-align: right;
+}
+
+#recipe table span {
+  color: red;
+}
+
+/* company */
+
+#contents section#company {}
+
+#company .inner {}
+
+#company img {
+  margin-right: 75px;
+}
+
+#company table {
+  font-size: 1.8rem;
+}
+
+#company table th {
+  padding: 0 40px 13px 0;
+  font-weight: normal;
+  text-align: left;
+}
+
+#company table td {
+  padding: 0 0 13px;
+}
+
+/* TABLE
+*****************************************************/
+
+.scroll-box {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-box table {
+  min-width: 100%;
+}
+
+.scroll-box table th, .scroll-box table td {
+  padding: 10px;
+  border: 1px #ccc solid;
+  border-width: 1px;
+  background: #fff;
+}
+
+/* media => PC
+■■■■■■■■■■■■■■■■■■■■■■■■ */
+
+@media only screen and (min-width:1125px) {
+  /* TABLE （PC Only）
+*****************************************************/
+  /* END TABLE  （PC Only）-----------------------------*/
+}
+
+/* footer要素
+----------------------------------------------------------- */
+
+#footer {
+  background: #282828;
+  color: #fff;
+}
+
+#footer .inner {
+  padding: 25px 0 10px 0;
+  text-align: center;
+}
+
+#footer .inner .nav li {
+  display: inline;
+  margin: 0 20px;
+}
+
+#footer .inner .nav a {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+#footer #pagetop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+#footer .copyright {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+/* 共通要素
+----------------------------------------------------------- */
+
+.imgL {
+  float: left;
+}
+
+.imgR {
+  float: right;
+}
+
+#contents section:nth-child(odd) {}
+
+.box_wrap {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+@media screen and (min-width: 741px) {
+  .btn_official {
+    display: block;
+    width: 380px;
+    height: 46px;
+    background: #6DBA42;
+    color: #fff !important;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding-top: 13px;
+    border-radius: 4px;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .btn_official {
+    display: block;
+    width: 80vw;
+    height: 8vw;
+    background: #6DBA42;
+    color: #fff !important;
+    font-size: 5vw;
+    text-align: center;
+    line-height: 8vw;
+    border-radius: 4px;
+    margin: 3vw auto 5vw;
+  }
+}
